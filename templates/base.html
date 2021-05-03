@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href=" {{ url_for('static', filename='style.css') }}">
+<title>{% block title %}{% endblock %}</title>
+</head>
+{% include "navbar.html" %}
+
+<body>
+	<div id="mainContent"></div>
+	{% block content %} {% endblock %}
+	<!--
+		<div id="mainHeader">
+			<h2>Danev.xyz</h2>
+		</div>
+		<div id="mainContent">
+			<p> Welcome to Danev.xyz! </p>
+		</div>
+		-->
+		<footer>
+			<a href="https://github.com/danevd-TCD/">Daniel Danev 2021</a>
+		</footer>
+</body>
+
+</html>
