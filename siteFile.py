@@ -19,6 +19,10 @@ def root():
 def returnImage(image):
         return send_file(app.static_folder + '/gallery/' + image)
 
+@app.route('/about')
+def aboutMe():
+        return render_template('about.html')
+
 @app.route('/gallery')
 def gallery():
         getImages()

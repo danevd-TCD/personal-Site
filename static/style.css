@@ -44,6 +44,29 @@ font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
     background-color: inherit;
 }
 
+#profilePhoto {
+	width: clamp(13rem, 13rem + 5vw, 20rem);
+	margin-left: 2vw;
+	align-self: center;
+}
+
+#photoIntro{
+	display:flex;
+	background-color: inherit;
+}
+
+p, a, ol, ul, li{
+	background-color: inherit;
+}
+
+.aboutH2{
+margin-top:auto;
+    font-family: Arial;
+    background-color: inherit;
+	margin-left: 2vw;
+	padding-top: 3rem;
+}
+
 #hero_text, h1, h3{
     margin-top:auto;
     font-family: Arial;
@@ -104,24 +127,15 @@ font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
         as the original source of information for the tiled responsive gallery using CSS columns.
         The technique was added to in an original way by using @media scaling to alter margins for the gallery on smaller devices
 */
-/*
-.galleryDivIndex{
-    margin-left: 10%;
-    width: 80%;
-    background-color: inherit;
-    line-height: 1.5vw;
-    column-count: 2;
-    column-gap: 0.3vw;
-    
-}
 
-.galleryDivIndex img{
-    width: 100% !important;
-    height: auto !important;
+#content_region { /* The main content body region */
+    background-color: #ffffff;
+    margin-bottom: 60px;
+	padding-top: 2vh;
 }
-*/
 
 .galleryDiv{
+	padding-top: 2vh;
     background-color: inherit;
     line-height: 1.5vw;
     column-width: clamp(1rem, 4.3818rem + 20.3636vw, 25rem);
@@ -134,47 +148,21 @@ font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
     height: auto !important;
 }
 
-/*
-
-@media (max-width: 2560px) {
-    .galleryDiv {
-        column-count: 4;
-    }
-    
-}
-/*
 @media (max-width: 400px) {
     
-    #main_container{
-        margin-left: 10%;
-        margin-right: 10%;
+    #main_container, #brand_container{
+        margin-left: 5%;
+        margin-right: 5%;
     }
-    
-    .galleryDiv {
-        column-count: 2;
-    }
-    
-}
 
-@media (min-width: 1000px){
-    #main_container{
-        margin-left: 40%;
-        margin-right: 40%;
-    }
-}
+}    
 
 @media (min-width: 900px){
-    #main_container{
-        margin-left: 10%;
-        margin-right: 10%;
+    #main_container, #brand_container{
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
-
-*/
-
-/*
-End of dynamic gallery CSS
-*/
 
 footer {   
     display: inline-block;
@@ -198,10 +186,7 @@ footer {
     background-color: inherit;
 }
 
-#content_region { /* The main content body region */
-    background-color: #ffffff;
-    margin-bottom: 60px;
-}
+
 
 #image_of_me {
     width: 20%;
@@ -212,6 +197,7 @@ footer {
 
 .content_text {
     display: inline-block;
-    padding: 2%;
+    padding-left: 2%;
     background-color: inherit;
+	margin: 0;
 }
