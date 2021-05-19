@@ -1,3 +1,18 @@
-<nav>
-	<a href="/">Home</a> | <a href="gallery">Gallery</a> | <a href = "https://www.dosyak.xyz"> Dosyak</a>
-</nav>
+<header>
+	<div id="brand_container">
+		<img id="brand_image" src="{{url_for('static', filename='logo.webp')}}">
+			<div id="hero_text">
+				<p/>
+				<h1 id="header1">Danev.xyz</h1>
+				<h3 id="header2">My personal website</h3>
+				<div id="navContainer">
+					<div id="buttonNav">
+					<!-- Could replace with Jinja template that scans through /static for .html files; necessary though?-->
+						<button class="Nav_Buttons" id="home" style="background-color: #b2dfdb" type="button" onclick="window.location.href='/';">Home</button>
+						<button class="Nav_Buttons" id="Gallery" type="button" onclick="window.location.href='/gallery';">Gallery</button>
+						<button class="Nav_Buttons" id="About" type="button" onclick="window.location.href='about.html';">About</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>

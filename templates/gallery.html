@@ -1,10 +1,14 @@
-{% extends 'base.html' %}
-{% block title %} Gallery | Danev.xyz {% endblock %}
+{% extends 'base.html' %} {% block title %} Gallery | Danev.xyz {% endblock %} 
 {% block content %}
-		<div id="mainHeader">
-			<h2>Gallery</h2>
+<main id="main_container">
+		
+	<div id="content_region">
+	<p class="content_text">A selection of some of my favorite shots from my photography hobby.</p>
+		<div class="galleryDiv">
+			{% for image in imgList %}
+				<img class="galleryImg" src="{{image}}" loading="lazy"/>
+			{% endfor %}
 		</div>
-		<div id="mainContent">
-			<p> Photos go here </p>
-		</div>
+	</div>
+</main>
 {% endblock %}
