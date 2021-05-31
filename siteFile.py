@@ -23,6 +23,10 @@ def returnImage(image):
 def aboutMe():
         return render_template('about.html')
 
+@app.route('/projects')
+def projects():
+        return render_template('projects.html')
+
 @app.route('/gallery')
 def gallery():
         getImages()

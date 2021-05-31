@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block title %} Projects | Danev.xyz {% endblock %} {% block content %}
+<main id="main_container">
+	<div id="backgroundBox">
+		<body>
+			<div id="content_region">
+				<p class="content_text">Here's a few of my past and present projects.</p>
+				<h2 class="aboutH2">This website</h2>
+				<p class="content_text">
+				This site is running on a
+				<a href="https://www.linode.com/">Linode Nanode</a>
+				instance running Ubuntu, with a domain name from
+				<a href="https://www.namecheap.com/">NameCheap</a>
+				. The site is using
+				<a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a>
+				as a backend framework, with
+				<a href="https://httpd.apache.org/">Apache</a>
+				acting as the HTTP server.
+				</p>
+				<p class="content_text">This particular stack was chosen due to my own personal prior experience in working with Python and Ubuntu. Particular emphasis is placed on keeping things as lean as possible; with only a single CPU core and 1GB of RAM available to my particular cloud instance price plan, I wanted to run a relatively lightweight setup that could leave me  with enough resources to tinker with in the background.
+				
+				<h2 class="aboutH2">DV Stats: A server status monitoring app </h2>
+				<div id="DVstats_flex">
+				<img id="DVstats_Pic" src="{{ url_for('static', filename='DVstats_WIP.jpg') }}">
+				<div style="background-color:inherit;">
+				<p class="content_text">
+
+				The inspiration for an app that could regularly ping my server and alert me in case of downtime arose when I tried to remote into my server instance and saw my connection timed out. After a few panicked minutes, including double-checking my DNS records were pointed properly, I received an email from my hosting server provider informing me that they had been made aware of a physical hardware incident with the server my instance occupied. 
+				</p>
+				<p class="content_text">
+				I determined then that I needed some sort of at-a-glance way of seeing that things were still running properly, and ideally a way to alert me without having to check in myself. 
+				</p>
+				<p class="content_text">
+				The app is still in early development, but can already ping a hardcoded API endpoint set up through my Flask backend through the Fuel networking library. Some basic functionality still on to to-do list:
+				<ul>
+					<li>Formatting received API responses (JSON parsing)</li>
+					<li>Allowing for user-input API call locations, and storing (multiple) locations to regularly connect to</li>
+					<li>Most of the UI; from design to implementation/how should the app look and function/etc</li>
+					<li>Notifications and alerts if server does not respond/responds with e.g high CPU usage value</li>
+				</ul>
+				</p>
+				<p class="content_text">
+				The app is also written in the exciting new Jetpack Compose system recently fully released by Google, which brings some interesting new paradigms to UI development in the Android world.
+				</p>
+				</div>
+				</div>
+		</div>
+	</body>
+</div>
+</main>
+{% endblock %}

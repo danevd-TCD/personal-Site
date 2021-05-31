@@ -44,14 +44,30 @@ font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
     background-color: inherit;
 }
 
+#DVstats_flex{
+	display: flex;
+	flex-direction: row;
+	background-color: inherit;
+}
+
 #profilePhoto {
 	width: clamp(13rem, 13rem + 5vw, 20rem);
 	margin-left: 2vw;
 	align-self: center;
 }
 
+#DVstats_Pic{
+		width: clamp(13rem, 13rem + 5vw, 20rem);
+		margin-left: 2%;
+		align-self: center; /* align-self: center; stops image spaghettification on thin viewports */
+}
+
 #photoIntro{
 	display:flex;
+	background-color: inherit;
+}
+
+i {
 	background-color: inherit;
 }
 
@@ -64,8 +80,17 @@ margin-top:auto;
     font-family: Arial;
     background-color: inherit;
 	margin-left: 2vw;
+	padding-top: 1rem;
+}
+
+.aboutH3{
+	margin-top:auto;
+    font-family: Arial;
+    background-color: inherit;
+	margin-left: 2vw;
 	padding-top: 3rem;
 }
+
 
 #hero_text, h1, h3{
     margin-top:auto;
@@ -196,8 +221,9 @@ footer {
 }
 
 .content_text {
-    display: inline-block;
     padding-left: 2%;
     background-color: inherit;
-	margin: 0;
+	margin-bottom: 10px;
+	text-align: justify;
+	padding-right: 2%;
 }
