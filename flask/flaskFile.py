@@ -1,7 +1,8 @@
 from flask import Flask, render_template, send_file, url_for, jsonify
 import os
 
-app = Flask(__name__, static_url_path='')
+
+app = Flask(__name__, static_url_path='',template_folder='../frontend/', static_folder='../frontend/')
 
 imgArray = None
 def getImages():
